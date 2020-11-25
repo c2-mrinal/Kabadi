@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/esti.css' />
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+  <% include partial/header.ejs %>
+    
+   
+
+    <section class="esti">  
+        <div class=" context-item">
+        <div class="items-price">
+            <div class="form-group">
+                <label for="selItem">Scrap Items</label>
+                <select class="form-control" id="selItem">
+                  <option>Plastic</option>
+                  <option>Paper</option>
+                  <option>Book</option>
+                  <option>Steel</option>
+                  <option>Copper</option>
+                  <option>Glass</option>
+                  <option>Aluminium</option>
+                  <option>Battery</option>
+                  <option>Wood items</option>
+                  <option>Wire</option>
+                  <option>Electrical</option>
+                  <option>Antique </option>
+
+                 
+                </select>
+              </div>
+        </div>
+        <div class="user-input ">
+            <p>Amount to Sell</p>
+            <input type="number" min="0" id="u-amount" placeholder="weight in kilogram">  
+        </div>
+        </div>
+        <div class="next-item ">
+            <button onclick="display()" class="btn"> Add <br>More</button>
+        </div>
+    </section>
+    <!-- dispaly estimated price -->
+    <section>
+        <table>
+            <thead>
+            <tr class="thProp">
+                <th>Item Selected</th>
+                <th> Item Amount</th>
+                <th> Item Price  </th>
+                <th>Total Price</th>
+            </tr>
+            </thead>
+            <tbody id="newRow" class="newR">
+               
+            </tbody><tbody>
+                <tr>
+                <th class="tot-est">Total Estimated Price is ( in ₹ )</th>
+                <th colspan="3" style="width: 100%;"> <span id="totalPrice"></span></th>
+            </tr>
+        </tbody>
+        </table>
+    </section>
+    <!-- to sechdule book deal -->
+    <section class="sec3">
+        <h3>  Want to Schedule The Deal</h3>
+     <div class="secD">
+         <div class="deal1">
+        <label for="Deal1"> Pick Dealer</label>
+        <select name="" id="Deal1" placeholder="Select Dealer">
+            <option value="">Ramesh</option>
+            <option value="">Suresh</option>
+            <option value="">Mahesh</option>
+            <option value="">Mukesh</option>
+        </select>
+    </div>
+        <a href="/" class="cta">
+            <span>Sehedule Deal</span>
+            <svg width="10px" height="8px" viewBox="0 0 13 10">
+            <path d="M1,5 L11,5"></path>
+            <polyline points="8 1 12 5 8 9"></polyline>
+            </svg>
+        </a>
+    </div>         
+    
+    </section>
+    <script>
+        let Plastic = 9 ;
+        let Paper= 6;
+        let Book= 9;
+        let Steel = 18;
+        let Copper= 31;
+        let Glass= 13;
+        let Aluminium = 69;
+        let Battery = 52;
+        let Wood = 22;
+        let Wire= 39;
+        let Electrical = 29;
+        let Antique = 101;
+        var price=0 ;
+        var selItemPri=0;     
+        var totalPrice= 0;  
+        var amount=0;
+        document.getElementById("totalPrice").innerHTML=totalPrice;
+
+        function display()
+        {
+            let item   = document.getElementById('selItem').value;
+                amount  = document.getElementById('u-amount').value;
+            let newRow  = document.getElementById('newRow');
+           
+           
+            switch(item){
+                case  'Plastic':
+                price= amount * Plastic;
+                selItemPri= Plastic;  
+                break;
+                case  'Paper':
+                price= amount* Paper;
+                selItemPri= Paper;  
+                break;
+                case  'Book':
+                price= amount*Book ;
+                selItemPri= Book;  
+                break;
+
+                case  'Steel':
+                price= amount*Steel ;
+                selItemPri= Steel;  
+                break;
+                case 'Copper': 
+                price= amount* Copper;
+                selItemPri= Copper;  
+                break;
+                case 'Glass': 
+                price= amount* Glass;
+                selItemPri= Glass;  
+                break;
+                case 'Aluminium': 
+                price= amount* Aluminium;
+                selItemPri= Aluminium;  
+                break;
+                case 'Battery': 
+                price= amount* Battery;
+                selItemPri= Battery;  
+                break;
+                case  'Wood' : 
+                price= amount* Wood;
+                selItemPri= Wood;  
+                break;
+                case  'Wire': 
+                price= amount* Wire;
+                selItemPri= Wire;  
+                break;
+                case  'Electrical':
+                price= amount* Electrical; 
+                selItemPri= Electrical;  
+                break;
+                case  'Antique' : 
+                price= amount* Antique;
+                selItemPri= Antique;  
+                break;
+            }
+            totalPrice += price ;
+            document.getElementById("totalPrice").innerHTML=totalPrice;
+                console.log(price);
+
+
+
+   var row = document.createElement("tr");
+   //var row=document.getElementById('newRow')
+    var iSel = document.createElement('td');
+    var iAmo = document.createElement('td');
+    var iPri = document.createElement('td');
+    var iTot = document.createElement('td');
+    row.appendChild(iSel);
+    iSel.appendChild(document.createTextNode(item));
+    row.appendChild(iAmo);
+    iAmo.appendChild(document.createTextNode(amount));
+    row.appendChild(iPri);
+    iPri.appendChild(document.createTextNode(selItemPri));
+    row.appendChild(iTot);
+    iTot.appendChild(document.createTextNode(price));
+    newRow.appendChild(row);
+        }
+    </script>
+    <script >
+      
+      </script>
+    
+    </section>
+    
+    <% include partial/footer.ejs %>
+
+  </body>
+</html>

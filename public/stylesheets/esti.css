@@ -1,0 +1,259 @@
+
+.esti{
+    background: rgba(197, 220, 226, 0.685);
+    display: flex;
+    width: 70%;
+    margin: 90px auto;
+    align-self: center;
+  
+    
+  }
+  .context-item{
+    flex: 2;
+    margin: 6% 15%;
+    font-family: "Cooper Black";
+     font-size: 1.5rem;
+      
+  }
+  
+  .items-price{
+  
+    max-width: 400px;
+    
+  }
+  .form-control{
+    font-size: 1.5rem;
+    height: 40px;
+    width: 300px;
+  }
+  .form-control option{
+   
+    
+    font-size: 1.5rem;
+    height: 40px;
+    width: 300px;
+  }
+  
+  .user-input ::placeholder{
+    text-align: center;
+  }
+  #u-amount{
+    height: 40px;
+    width: 300px;
+  }
+  .next-item{
+   
+    align-items: center;
+    margin: auto 30% auto  0;
+  }
+  /* section1 end */
+  /* section2 */
+  table {
+    font-family: arial, sans-serif;
+    
+    width: 80%;
+    margin: auto;
+    border: 0.7px;
+   
+  }
+  
+   tr, th{
+    border: 1px solid #dddddd;
+    
+    text-align: center;
+    padding: 8px;
+    
+  }
+  tr, td {
+    border: 1px solid #dddddd;
+    justify-content: space-between;
+  
+    padding: 8px;
+  }
+  .thProp{
+    width: 25%;
+  }
+  
+  .tr-head
+  {
+      text-emphasis: bold;
+  }
+  .tot-est{
+   
+      width: 100%;
+  }
+  .newR td{
+   
+    width:100%;
+  }
+  /* section2 End */
+  /* section3  */
+  .sec3{
+    background: rgba(145, 96, 61, 0.253);
+    width: 80%;
+    text-align: center;
+    margin:  80px auto;
+    padding: 60px;
+  }
+  .sec3 h3{
+    font-family: OCR A Std, monospace;
+    font-weight: bold;
+    padding: 40px;
+  }
+  .secD{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+    margin: auto;
+  }
+  .deal1{
+    margin: 0 20%;
+  }
+  /* section3 End */
+  /* Button1 */
+  .btn {
+    width: 4rem;
+    height: 10rem;
+    background: #f3f0f1;
+    position: relative;
+    background: #f3f0f1;
+    margin: auto;
+    border-radius: 32px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+  }
+  .btn span {
+    line-height: 100px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    font-weight: semibold;
+  }
+   .btn:nth-child(1) {
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2);
+    color: #6f6cde;
+  }
+  .btn:nth-child(1):hover {
+    opacity: 0.3;
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2);
+  }
+   .btn:nth-child(1):active {
+    opacity: 1;
+    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5), inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+    color: #79e3b6;
+  }
+  .btn:nth-child(2) {
+    opacity: 0.3;
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2);
+    color: #6f6cde;
+  }
+  .btn:nth-child(3) {
+    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5), inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+    color: #79e3b6;
+  }
+  .btn:nth-child(3):hover {
+    opacity: 1;
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  /* Button1 end */
+  
+  /* Button2 */
+  
+  .cta a, a:hover, a:focus, a:active {
+    text-decoration: none ;
+    color: inherit;
+  }
+  
+  .cta {
+    position: relative;
+    margin: auto;
+    padding: 19px 22px;
+    transition: all .2s ease;
+  }
+  
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: rgba(255, 171, 157, 0.5);
+    width: 56px;
+    height: 56px;
+    transition: all .3s ease;
+  }
+  
+  .cta span {
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 900;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+  
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #111;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all .3s ease;
+  }
+  
+  .cta:hover:before {
+    width: 100%;
+    background: #ffab9d;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active {
+    transform: scale(0.96);
+  }
+  /* button2 End */
+  
+  @media screen and (max-width: 768px) {
+  form-control{
+    font-size: .1rem;
+    height: 40px;
+    width: 100px;
+  }
+  .form-control option{
+   
+    
+  font-size: 1rem;
+  height: 40px;
+  width: 100px;
+  }
+  
+  }
+  
+  @media screen and (max-width: 570px) {
+  form-control{
+    font-size: .8rem;
+    height: 30px;
+    width: 100px;
+  }
+  .cta
+  {
+    width: 100%;
+  }
+  }
+  
+  @media screen and (max-width: 480px) {
+  
+  }
+  
+  
+  
+  
+  
